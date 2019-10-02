@@ -1,0 +1,40 @@
+@import "./base/_vars.sass"
+@import "./base/_mixins.sass"
+.card
+    position: relative
+    display: inline-block
+    width: 270px
+    height: 270px
+    font-family: "Monseratte", sans-serif
+    text-align: center
+    border-bottom: 1px solid $lightGrey
+    border-top: 1px solid $lightGrey
+    margin: 0 13px
+    box-sizing: border-box
+    &:first-child
+        margin-left: 0
+    &:last-child
+        margin-right: 0
+    & div
+        display: none
+    & &_hover
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        background: #fcfcfc
+        width: 100%
+        height: 100%
+        outline: 1px solid $cardBorder
+    &__name
+        font-size: 22px
+        color: $dark
+        font-weight: 700
+        padding-bottom: 12px 
+    &__details
+        font-size: 14px
+        font-weight: 300
+        color: $colorTextContent
+        line-height: 1.571
+
+

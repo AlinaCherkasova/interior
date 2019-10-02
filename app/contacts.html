@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interior</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700&display=swap" rel="stylesheet">
+
+    <script>
+        // этот скрипт делает активными ссылки меню
+        $(function () {
+            $('.menu__link').click(function () {
+                $('.menu__link').removeClass('menu__active')
+                $(this).addClass('menu__active')
+            });
+        });
+    </script>
+
+
+
+</head>
+
+<body>
+    <header class="contacts">
+        <div class="container">
+            <div class="header clearfix">
+                <a href="#">
+                    <img src="./img/logo.svg" alt="logo">
+                </a>
+                <nav class="menu">
+                    <ul class="menu__wrapper clearfix">
+                        <li class="menu__item">
+                            <a class="menu__link" href="./index.html" data-target="anchore">home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#products" data-target="anchore">products</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#" data-target="anchore">history</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#showroom" data-target="anchore">showroom</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link menu__active" href="./contacts.html" data-target="anchore">contact</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link_search" href="#">
+                                <img src="./img/search.svg" alt="search">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <h1 class="contacts__title">Contact Us</h1>
+            </div>
+        </div>
+    </header>
+    <section class="location">
+        <div class="container">
+            <div class="location__card">
+                <img src="./img/location.png" alt="location">
+                <h6 class="location__place">California</h6>
+                <p class="location__details">Phone:</p>
+                <p class="location__information">1900 - 1234 -5678</p>
+                <p class="location__details">Email:</p>
+                <p class="location__information">info@interior.com</p>
+                <p class="location__details">Address:</p>
+                <p class="location__address">12 W 1st St, 90001 Los Angeles, California</p>
+            </div>
+            <div class="location__card">
+                <img src="./img/location.png" alt="location">
+                <h6 class="location__place">California</h6>
+                <p class="location__details">Phone:</p>
+                <p class="location__information">1900 - 1234 -5678</p>
+                <p class="location__details">Email:</p>
+                <p class="location__information">info@interior.com</p>
+                <p class="location__details">Address:</p>
+                <p class="location__address">12 W 1st St, 90001 Los Angeles, California</p>
+            </div>
+            <div class="location__card">
+                <img src="./img/location.png" alt="location">
+                <h6 class="location__place">California</h6>
+                <p class="location__details">Phone:</p>
+                <p class="location__information">1900 - 1234 -5678</p>
+                <p class="location__details">Email:</p>
+                <p class="location__information">info@interior.com</p>
+                <p class="location__details">Address:</p>
+                <p class="location__address">12 W 1st St, 90001 Los Angeles, California</p>
+            </div>
+            <div class="clf"></div>
+        </div>
+    </section>
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <div class="footer__contacts">
+                <h4 class="footer__h4">Contact Us</h4>
+                <p>132A Bridge Road Richmond VIC Australia.</p>
+                <p>Talk to us on 1300 132 info@interior.com</p>
+            </div>
+            <div class="footer__information">
+                <h4 class="footer__h4">Useful Information</h4>
+                <ul>
+                    <li><a href="#">Sales terms</a></li>
+                    <li><a href="#">Customer care</a></li>
+                    <li><a href="#">Delivery</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Architect accounts</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Exchanges & returns</a></li>
+                </ul>
+            </div>
+            <div class="footer__form">
+                <h4 class="footer__h4">Let’s Stay in Touch!</h4>
+                <p>Suscribe to know about our latest news, products and special offers just for suscribers.</p>
+                <input type="email" placeholder="your email address">
+            </div>
+            <div class="footer__copyright">
+                <p>&copy; Copyright - INTERIOR 2016. All Rights Reserved.</p>
+                <p>Terms & Conditions / Privacy policy & Cookies</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

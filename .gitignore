@@ -1,0 +1,8 @@
+/node_modules/
+/templates/
+/.git/
+/.vscode/
+*.psd
+package-lock.json
+/**/Thumbs.db
+/**/*.DS_Store

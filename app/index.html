@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interior</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700&display=swap" rel="stylesheet">
+
+    <script>
+        // этот скрипт делает активными ссылки меню
+        $(function () {
+            $('.menu__link').click(function () {
+                $('.menu__link').removeClass('menu__active')
+                $(this).addClass('menu__active')
+            });
+        });
+        // этот скрипт делает активными ссылки в блоке ".featuredProduct"
+        $(function () {
+            $('.title__wrapper a').click(function () {
+                $('.title__wrapper a').removeClass('title_active')
+                $(this).addClass('title_active')
+            });
+        });
+        // этот скрипт плавно прокручивает к якорям
+        $(function () {
+            $('a[data-target^="anchore"]').bind('click.smoothscroll', function () {
+                let target = $(this).attr('href');
+                let bl_top = $(target).offset().top;
+                $('body, html').animate({
+                    scrollTop: bl_top
+                }, 700);
+                return false;
+            });
+        });
+    </script>
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="slider">
+                <div class="header clearfix">
+                    <a href="#">
+                        <img src="./img/logo.svg" alt="logo">
+                    </a>
+                    <nav class="menu">
+                        <ul class="menu__wrapper clearfix">
+                            <li class="menu__item">
+                                <a class="menu__link menu__active" href="#" data-target="anchore">home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#products" data-target="anchore">products</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#" data-target="anchore">history</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#showroom" data-target="anchore">showroom</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./contacts.html" data-target="anchore">contact</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link_search" href="#">
+                                    <img src="./img/search.svg" alt="search">
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class=" slider__text content">
+                    <p class="content__trending">trending</p>
+                    <h2 class="content__h2">Fishnet Chair</h2>
+                    <p class="content__details">Seat and back with upholstery made of cold cure foam.
+                        Steel frame,
+                        available in matt powder-coated black</p>
+                    <a href="#" class="button">order us
+                        <img src="./img/arrow.png" alt="follow">
+                    </a>
+                </div>
+                <div class="pagination">
+                    <a href="" class="pagination__circle"></a>
+                    <a href="" class="pagination__circle pagination__active"></a>
+                    <a href="" class="pagination__circle"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="featuredProduct">
+        <div class="container">
+            <div class="title clearfix">
+                <div class="title__wrapper">
+                    <div></div>
+                    <a href="#" class="title__heading title_active">Featured</a>
+                    <a href="#" class="title__new">New</a>
+                </div>
+                <a href="#" class="title__all">
+                    explore all
+                    <img src="./img/arrow.png" alt="follow">
+                </a>
+            </div>
+            <div class="card__wrapper">
+                <div class="card">
+                    <img src="./img/product-1.jpeg" alt="product">
+                    <div class="card_hover">
+                        <a href="#" class="button button_circle">
+                            <img src="./img/arrow.png" alt="follow">
+                        </a>
+                        <h6 class="card__name">Fishnet Chair</h6>
+                        <p class="card__details">Seat and back with upholstery made of cold cure foam
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/product-2.jpeg" alt="product">
+                    <div>
+                        <a href="#" class="button button_circle">
+                            <img src="./img/arrow.png" alt="follow">
+                        </a>
+                        <h6 class="card__name">Fishnet Chair</h6>
+                        <p class="card__details">Seat and back with upholstery made of cold cure foam
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/product-3.jpeg" alt="product">
+                    <div>
+                        <a href="#" class="button button_circle">
+                            <img src="./img/arrow.png" alt="follow">
+                        </a>
+                        <h6 class="card__name">Fishnet Chair</h6>
+                        <p class="card__details">Seat and back with upholstery made of cold cure foam
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/product-4.jpeg" alt="product">
+                    <div>
+                        <a href="#" class="button button_circle">
+                            <img src="./img/arrow.png" alt="follow">
+                        </a>
+                        <h6 class="card__name">Fishnet Chair</h6>
+                        <p class="card__details">Seat and back with upholstery made of cold cure foam
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="promo">
+        <div class="promo__card">
+            <img src="./img/promo-img1.jpeg" alt="">
+            <div class="content promo__position">
+                <p class="content__trending content__special">exclusive</p>
+                <h2 class="content__h2">Fishnet Chair</h2>
+                <p class="content__details">Seat and back with upholstery made of cold cure foam. Steel frame,
+                    available in matt powder-coated black</p>
+                <a href="#" class="button">order us
+                    <img src="./img/arrow.png" alt="follow">
+                </a>
+            </div>
+        </div>
+        <div class="promo__card">
+            <img src="./img/promo-img_2.jpeg" alt="">
+            <div class="content promo__position">
+                <p class="content__trending content__special">exclusive</p>
+                <h2 class="content__h2">Fishnet Chair</h2>
+                <p class="content__details">Seat and back with upholstery made of cold cure foam. Steel frame,
+                    available in matt powder-coated black</p>
+                <a href="#" class="button">order us
+                    <img src="./img/arrow.png" alt="follow">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="trending" id="showroom">
+        <div class="container">
+            <div class="title clearfix">
+                <div class="title__wrapper">
+                    <a href="#" class="title__header">Trending Products</a>
+                </div>
+                <a href="#" class="title__all">
+                    explore all
+                    <img src="./img/arrow.png" alt="follow">
+                </a>
+            </div>
+            <div class="trending__contentWrapper">
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-11.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-21.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-31.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-41.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-61.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-11.jpeg" alt="product">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hotDeals">
+        <div class="container">
+            <div class="slider">
+                <div class="content hotDeals__position">
+                    <p class="content__trending content__hotDeal">Hot deal</p>
+                    <h2 class="content__h2">Fishnet Chair</h2>
+                    <p class="content__details">Seat and back with upholstery made of cold cure foam. Steel frame,
+                        available in matt powder-coated black</p>
+                    <a href="#" class="button">order us
+                        <img src="./img/arrow.png" alt="follow">
+                    </a>
+                </div>
+                <div class="pagination">
+                    <a href="" class="pagination__circle"></a>
+                    <a href="" class="pagination__circle pagination__active"></a>
+                    <a href="" class="pagination__circle"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="exclusive" id="products">
+        <div class="container">
+            <div class="exclusive__contentWrapper">
+                <div class="exclusive__mainProduct">
+                    <img src="./img/product-1-lg.jpeg" alt="exclucive pillow">
+                    <div class="content exclusive__position">
+                        <p class="content__trending content__special">exclusive</p>
+                        <h2 class="content__h2 exclusive__h2">Fishnet Chair</h2>
+                        <p class="content__details">Seat and back with upholstery made of cold cure foam. Steel frame,
+                            available in matt powder-coated black</p>
+                        <a href="#" class="button">order us
+                            <img src="./img/arrow.png" alt="follow">
+                        </a>
+                    </div>
+                </div>
+                <div class="clearfix exclusive__products">
+                    <div class="exclusive__content">
+                        <div class="exclusive__wrapperImg">
+                            <img src="./img/product-2-sm.jpeg" alt="exclusive lamp">
+                        </div>
+                    </div>
+                    <div class="exclusive__content">
+                        <div class="exclusive__wrapperImg">
+                            <img src="./img/product-3-sm.jpeg" alt="exclusive couch">
+                        </div>
+                    </div>
+                    <div class="exclusive__content">
+                        <div class="exclusive__wrapperImg">
+                            <img src="./img/product-4-sm.jpeg" alt="exclusive watch">
+                        </div>
+                    </div>
+                    <div class="exclusive__content">
+                        <div class="exclusive__wrapperImg">
+                            <img src="./img/product-5-sm.jpeg" alt="exclusive bra">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mobileApp">
+        <div class="container">
+            <div class="content">
+                <p class="content__trending content__mobileApp">mobile app</p>
+                <h2 class="content__h2 content_fixedWidth">Find. Follow. Favorite.</h2>
+                <p class="content__details content__details_marginBottom">Save your favorites and share your style.</p>
+                <a href="#">
+                    <img src="./img/app_store.png" alt="app store">
+                </a>
+                <a href="#">
+                    <img src="./img/google_play.png" alt="google store">
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <div class="footer__contacts">
+                <h4 class="footer__h4">Contact Us</h4>
+                <p>132A Bridge Road Richmond VIC Australia.</p>
+                <p>Talk to us on 1300 132 info@interior.com</p>
+            </div>
+            <div class="footer__information">
+                <h4 class="footer__h4">Useful Information</h4>
+                <ul>
+                    <li><a href="#">Sales terms</a></li>
+                    <li><a href="#">Customer care</a></li>
+                    <li><a href="#">Delivery</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Architect accounts</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Exchanges & returns</a></li>
+                </ul>
+            </div>
+            <div class="footer__form">
+                <h4 class="footer__h4">Let’s Stay in Touch!</h4>
+                <p>Suscribe to know about our latest news, products and special offers just for suscribers.</p>
+                <input type="email" placeholder="your email address">
+            </div>
+            <div class="footer__copyright">
+                <p>&copy; Copyright - INTERIOR 2016. All Rights Reserved.</p>
+                <p>Terms & Conditions / Privacy policy & Cookies</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

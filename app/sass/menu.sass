@@ -1,0 +1,23 @@
+@import "./base/_vars.sass"
+@import "./base/_mixins.sass"
+.menu
+    float: right
+    font-size: 14px
+    font-family: 'Montserrat', sans-serif
+    text-transform: uppercase
+    &__item
+        float: left
+    &__link
+        text-decoration: none
+        color: $colorText
+        font-weight: 300
+        letter-spacing: 1.4px
+        padding: 10px 13px
+        &:hover
+            color: $dark
+        &_search
+            padding: 10px 13px
+    &__active
+        color: $dark
+        font-weight: 700
+        border-bottom: 3px solid $dark

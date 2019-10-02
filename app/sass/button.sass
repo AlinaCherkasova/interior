@@ -1,0 +1,32 @@
+@import "./base/_mixins.sass"
+@import "./base/_vars.sass"
+
+.button
+    display: inline-block
+    width: 212px
+    height: 45px
+    line-height: 45px
+    font-size: 18px
+    font-family: "Montserrat", sans-serif
+    color: $dark
+    font-weight: 700
+    letter-spacing: 3.6px
+    text-transform: uppercase
+    text-align: center
+    text-decoration: none
+    background: $light
+    box-shadow: 0px 2px 4.85px 0.15px rgba(33, 33, 33, 0.35)
+    border-radius: 23px
+    transition: .5s
+    &:hover
+        background: $lightGrey
+    & img 
+        margin-left: 21px
+    &_circle
+        width: 50px
+        height: 50px
+        margin: 62px 0 20px 0
+        & img 
+            margin-left: 0px
+            width: 12px
+            transform: translateY(4px)

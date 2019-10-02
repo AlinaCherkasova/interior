@@ -1,0 +1,19 @@
+@import "./base/_mixins.sass"
+@import "./base/_vars.sass"
+
+.promo
+    height: 682px
+    background: cover
+    overflow: hidden
+    &__card
+        position: relative
+        width: (50%-0.15%)
+        height: 682px
+        display: inline-block
+        &:last-child
+            // float: right
+    &__position
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translate(50px, -50%)

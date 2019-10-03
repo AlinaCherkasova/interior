@@ -1,0 +1,22 @@
+@import "./base/_vars.sass"
+@import "./base/_mixins.sass"
+.socialIcons
+    float: left
+    position: relative
+    left: 25%
+    transform: translateX(-65%)
+    &__items
+        float: left
+        margin: 0 3px
+        background: $colorTextContent
+        width: 30px
+        height: 30px
+        text-align: center
+        border-radius: 50%
+        transition: 0.7s
+        &:hover
+            transform: rotateY(360deg)
+    &__icon
+        color: $light
+        top: 50%
+        transform: translateY(58%)

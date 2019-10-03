@@ -9,20 +9,18 @@
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/1539957057.js" crossorigin="anonymous"></script>
     <script>
         // этот скрипт делает активными ссылки меню
         $(function () {
-            $('.menu__link').click(function () {
-                $('.menu__link').removeClass('menu__active')
-                $(this).addClass('menu__active')
+            $('.navigation__link').click(function () {
+                $('.navigation__link').removeClass('navigation__active')
+                $(this).addClass('navigation__active')
             });
         });
     </script>
 
 
-
-</head>
 
 <body>
     <header class="contacts">
@@ -31,25 +29,26 @@
                 <a href="#">
                     <img src="./img/logo.svg" alt="logo">
                 </a>
-                <nav class="menu">
-                    <ul class="menu__wrapper clearfix">
-                        <li class="menu__item">
-                            <a class="menu__link" href="./index.html" data-target="anchore">home</a>
+                <nav class="navigation navigation__menu">
+                    <ul class="navigation__wrapper clearfix">
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="./index.html" data-target="anchore">home</a>
                         </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#products" data-target="anchore">products</a>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="./products.html" data-target="anchore">products</a>
                         </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#" data-target="anchore">history</a>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#" data-target="anchore">history</a>
                         </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#showroom" data-target="anchore">showroom</a>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#showroom" data-target="anchore">showroom</a>
                         </li>
-                        <li class="menu__item">
-                            <a class="menu__link menu__active" href="./contacts.html" data-target="anchore">contact</a>
+                        <li class="navigation__item">
+                            <a class="navigation__link menu__active" href="./contacts.html"
+                                data-target="anchore">contact</a>
                         </li>
-                        <li class="menu__item">
-                            <a class="menu__link_search" href="#">
+                        <li class="navigation__item">
+                            <a class="navigation__link_search" href="#">
                                 <img src="./img/search.svg" alt="search">
                             </a>
                         </li>
@@ -117,10 +116,37 @@
             <div class="footer__form">
                 <h4 class="footer__h4">Let’s Stay in Touch!</h4>
                 <p>Suscribe to know about our latest news, products and special offers just for suscribers.</p>
-                <input type="email" placeholder="your email address">
+                <div class="footer__relative">
+                    <input type="email" placeholder="your email address">
+                    <span class="footer__telegramIcon fab fa-telegram-plane fa-lg"></span>
+                </div>
             </div>
             <div class="footer__copyright">
                 <p>&copy; Copyright - INTERIOR 2016. All Rights Reserved.</p>
+                <div class="socialIcons">
+                    <ul class="socialIcons__navigation">
+                        <li class="socialIcons__items">
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <i class="socialIcons__icon fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="socialIcons__items">
+                            <a href="https://twitter.com/" target="_blank">
+                                <i class="socialIcons__icon fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="socialIcons__items">
+                            <a href="https://www.google.com/" target="_blank">
+                                <i class="socialIcons__icon fab fa-google-plus-g"></i>
+                            </a>
+                        </li>
+                        <li class="socialIcons__items">
+                            <a href="https://www.pinterest.com/" target="_blank">
+                                <i class="socialIcons__icon fab fa-pinterest-p"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <p>Terms & Conditions / Privacy policy & Cookies</p>
             </div>
         </div>

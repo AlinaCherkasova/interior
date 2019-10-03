@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interior</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1539957057.js" crossorigin="anonymous"></script>
+    <script>
+        // этот скрипт делает активными ссылки меню
+        $(function () {
+            $('.navigation__link').click(function () {
+                $('.navigation__link').removeClass('navigation__active')
+                $(this).addClass('navigation__active')
+            });
+        });
+        // этот скрипт плавно прокручивает к якорям
+        $(function () {
+            $('a[data-target^="anchore"]').bind('click.smoothscroll', function () {
+                let target = $(this).attr('href');
+                let bl_top = $(target).offset().top;
+                $('body, html').animate({
+                    scrollTop: bl_top
+                }, 700);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header class="contacts">
+        <div class="container">
+            <div class="header clearfix">
+                <a href="#">
+                    <img src="./img/logo.svg" alt="logo">
+                </a>
+                <nav class="navigation navigation__menu">
+                    <ul class="navigation__wrapper clearfix">
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="./index.html" data-target="anchore">home</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="./products.html" data-target="anchore">products</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#" data-target="anchore">history</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#showroom" data-target="anchore">showroom</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link menu__active" href="./contacts.html"
+                                data-target="anchore">contact</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link_search" href="#">
+                                <img src="./img/search.svg" alt="search">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <h1 class="contacts__title">Our Products Range</h1>
+            </div>
+        </div>
+    </header>
+    <section class="trending" id="showroom">
+        <div class="container">
+            <div class="title clearfix">
+                <ul class="navigation clearfix">
+                    <li class="navigation__item">
+                        <a class="navigation__link navigation__active" href="#" data-target="anchore">all</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#" data-target="anchore">home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#" data-target="anchore">office</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#" data-target="anchore">furniture</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#" data-target="anchore">modern</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#" data-target="anchore">classic</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="trending__contentWrapper trending_paddingBottom">
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-11.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-21.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-31.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-41.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-61.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-11.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-11.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-21.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-31.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-41.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-61.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-11.jpeg" alt="product">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="promo">
+        <div class="promo__card">
+            <img src="./img/promo-img1.jpeg" alt="">
+            <div class="content promo__position">
+                <p class="content__trending content__special">exclusive</p>
+                <h2 class="content__h2">Fishnet Chair</h2>
+                <p class="content__details">Seat and back with upholstery made of cold cure foam. Steel frame,
+                    available in matt powder-coated black</p>
+                <a href="#" class="button">order us
+                    <img src="./img/arrow.png" alt="follow">
+                </a>
+            </div>
+        </div>
+        <div class="promo__card">
+            <img src="./img/promo-img_2.jpeg" alt="">
+            <div class="content promo__position">
+                <p class="content__trending content__special">exclusive</p>
+                <h2 class="content__h2">Fishnet Chair</h2>
+                <p class="content__details">Seat and back with upholstery made of cold cure foam. Steel frame,
+                    available in matt powder-coated black</p>
+                <a href="#" class="button">order us
+                    <img src="./img/arrow.png" alt="follow">
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <div class="footer__contacts">
+                <h4 class="footer__h4">Contact Us</h4>
+                <p>132A Bridge Road Richmond VIC Australia.</p>
+                <p>Talk to us on 1300 132 info@interior.com</p>
+            </div>
+            <div class="footer__information">
+                <h4 class="footer__h4">Useful Information</h4>
+                <ul>
+                    <li><a href="#">Sales terms</a></li>
+                    <li><a href="#">Customer care</a></li>
+                    <li><a href="#">Delivery</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Architect accounts</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Exchanges & returns</a></li>
+                </ul>
+            </div>
+            <div class="footer__form">
+                <h4 class="footer__h4">Let’s Stay in Touch!</h4>
+                <p>Suscribe to know about our latest news, products and special offers just for suscribers.</p>
+                <div class="footer__relative">
+                    <input type="email" placeholder="your email address">
+                    <span class="footer__telegramIcon fab fa-telegram-plane fa-lg"></span>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <p>&copy; Copyright - INTERIOR 2016. All Rights Reserved.</p>
+                <div class="socialIcons">
+                    <ul class="socialIcons__navigation">
+                        <li class="socialIcons__items">
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <i class="socialIcons__icon fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="socialIcons__items">
+                            <a href="https://twitter.com/" target="_blank">
+                                <i class="socialIcons__icon fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="socialIcons__items">
+                            <a href="https://www.google.com/" target="_blank">
+                                <i class="socialIcons__icon fab fa-google-plus-g"></i>
+                            </a>
+                        </li>
+                        <li class="socialIcons__items">
+                            <a href="https://www.pinterest.com/" target="_blank">
+                                <i class="socialIcons__icon fab fa-pinterest-p"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>Terms & Conditions / Privacy policy & Cookies</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -13,14 +13,23 @@
     <script>
         // этот скрипт делает активными ссылки меню
         $(function () {
-            $('.navigation__link').hover(function () {
-                $('.navigation__link').removeClass('navigation__active')
+            $('header .navigation__link').hover(function () {
+                $('header .navigation__link').removeClass('navigation__active')
                 $(this).addClass('navigation__active')
             });
-            $('.navigation__link').mouseleave(function () {
-                $('.navigation__link').removeClass('navigation__active')
+            $('header .navigation__link').mouseleave(function () {
+                $('header .navigation__link').removeClass('navigation__active')
             });
-
+        });
+        // этот скрипт делает активными ссылки навигации в блоке деталей
+        $(function () {
+            $('.details .navigation__link').hover(function () {
+                $('.details .navigation__link').removeClass('navigation__check')
+                $(this).addClass('navigation__check')
+            });
+            $('.details .navigation__link').mouseleave(function () {
+                $('.details .navigation__link').removeClass('navigation__check')
+            });
         });
         // этот скрипт делает активными ссылки в блоке ".featuredProduct"
         $(function () {
@@ -41,9 +50,6 @@
             });
         });
     </script>
-
-
-
 </head>
 
 <body>
@@ -84,7 +90,7 @@
         <div class="navigation__wrap">
             <ul class="navigation navigation__center clearfix">
                 <li class="navigation__item">
-                    <a class="navigation__link navigation__check" href="#" data-target="anchore">all</a>
+                    <a class="navigation__link" href="#" data-target="anchore">all</a>
                 </li>
                 <li class="navigation__item">
                     <a class="navigation__link" href="#" data-target="anchore">home</a>

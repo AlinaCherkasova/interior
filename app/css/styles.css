@@ -37,7 +37,7 @@
     color: #ffffff;
     font-size: 22px; }
     .button_red:hover {
-      background: #fb3d2f; }
+      background: #fe3b2c; }
     .button_red img {
       position: relative;
       top: 10%;
@@ -208,9 +208,19 @@
   display: inline-block;
   width: 270px;
   height: 270px;
-  margin: 0px -5px 30px 15px; }
+  margin: 0px -5px 30px 15px;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
   .exclusive__content:nth-child(even) {
     margin: 0 0px 30px 30px; }
+  .exclusive__content:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05); }
 
 .footer {
   background: #f7f7f7;
@@ -352,7 +362,8 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 header {
   background: url("../img/slider-img.jpeg") no-repeat center center/cover; }
@@ -424,7 +435,7 @@ ul {
       padding: 10px 13px; }
   .navigation__active, .navigation__check {
     color: #212121;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1.3px; }
   .navigation__active {
     border-bottom: 3px solid #212121; }
@@ -451,7 +462,7 @@ ul {
 
 .promo {
   height: 682px;
-  background: cover;
+  background-size: cover;
   overflow: hidden; }
   .promo__card {
     position: relative;

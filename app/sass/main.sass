@@ -9,9 +9,17 @@ header
     background: url("../img/slider-img.jpeg") no-repeat center center / cover
 
 .container
-    width: 1170px
+    max-width: 1170px
     margin: 0 auto
-
+@media (max-width: 991.98px)
+    .container
+        width: 80%
+@media (max-width: 767.98px)
+    .container
+        width: 80%
+@media (max-width: 575.98px)
+    .container
+        width: 80%
 a
     text-decoration: none
 
@@ -27,7 +35,7 @@ ul
     padding-top: 63px
 
 .featuredProduct
-    height: 610px
+    min-height: 610px
 .clf
     clear: both
 

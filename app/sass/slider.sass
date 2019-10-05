@@ -3,6 +3,12 @@
 .slider
     position: relative
     font-family: "Montserrat", sans-serif
-    height: 800px
+    min-height: 800px
     &__text
         margin-top: 283px
+@media (max-width: 606px)
+    .slider
+        &__text
+            position: absolute
+            top: 10%
+            transform: translateY(-20%)

@@ -21,8 +21,8 @@
         text-transform: none
         font-weight: 600
     &__details
-        width: 458px
-        height: 38px
+        max-width: 458px
+        // height: 38px
         font-size: 14px
         font-weight: 300
         color: $colorTextContent
@@ -34,4 +34,10 @@
         color: $colorTextContent
     &_fixedWidth
         font-size: 62px
-        width: 472px
+        max-width: 472px
+@media (max-width: 500px)
+    .content
+        &__promo
+            font-size: 48px
+        &_fixedWidth
+            font-size: 48px

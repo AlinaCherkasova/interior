@@ -1,7 +1,7 @@
 @import "./base/_mixins.sass"
 @import "./base/_vars.sass"
 .contacts
-    height: 360px
+    min-height: 360px
     background: $contacts
     &__title
         font-size: 62px
@@ -9,3 +9,8 @@
         font-weight: 100
         color: $dark
         margin-top: 168px
+@media (max-width: 500px)
+    .contacts
+        &__title
+            font-size: 38px
+            margin-top: 100px

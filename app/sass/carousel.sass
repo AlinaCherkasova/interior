@@ -6,5 +6,25 @@
     text-align: center
     & > div
         display: inline-block
-    & > div:not(:first-child)
-        margin: 0 10px
+    &__wrapperSmallImages
+            display: block
+            width: 100%
+            & > div
+                display: inline-block
+                margin: 0 10px
+@media (max-width: 992px)
+    .carousel
+        display: block
+        width: 80%
+        max-width: 100%
+        position: relative
+        left: 50%
+        transform: translateX(-50%)
+        text-align: center
+        & > div
+            width: 100%
+            height: auto
+            display: inline-block
+            & > img
+                width: 100%
+                height: auto

@@ -39,6 +39,34 @@
                 return false;
             });
         });
+
+        $(function ($) {
+            function fix_size() {
+                var images = $('.trending__wrapperImg img');
+                images.each(setsize);
+
+                function setsize() {
+                    var img = $(this),
+                        img_dom = img.get(0),
+                        container = img.parents('.trending__wrapperImg');
+                    if (img_dom.complete) {
+                        resize();
+                    } else img.one('load', resize);
+
+                    function resize() {
+                        if ((container.width() / container.height()) < (img_dom.width / img_dom.height)) {
+                            img.width('100%');
+                            img.height('auto');
+                            return;
+                        }
+                        img.height('100%');
+                        img.width('auto');
+                    }
+                }
+            }
+            $(window).on('resize', fix_size);
+            fix_size();
+        });
     </script>
 </head>
 
@@ -75,7 +103,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class=" slider__text content">
+                <div class="slider__text content">
                     <p class="content__trending">trending</p>
                     <h2 class="content__h2">Fishnet Chair</h2>
                     <p class="content__details">Seat and back with upholstery made of cold cure foam.

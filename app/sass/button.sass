@@ -2,6 +2,7 @@
 @import "./base/_vars.sass"
 
 .button
+    position: relative
     display: inline-block
     width: 212px
     height: 45px
@@ -45,3 +46,7 @@
         height: 70px
         border-radius: 70px
         line-height: 70px
+@media (max-width: 694px)
+    .button
+        &_long
+            width: 300px

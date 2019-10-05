@@ -2,19 +2,31 @@
 @import "./base/_vars.sass"
 
 .promo
-    height: 682px
+    min-height: 682px
     background-size: cover
     overflow: hidden
     &__card
         position: relative
         width: 50%
         height: 682px
-        float: left
+        &:first-child
+            float: right
+        & > img 
+            position: absolute
+            right: 0
     &__cardWrapper
-        width: 1350px
+        max-width: 1350px
         margin: 0 auto
     &__position
         position: absolute
         top: 50%
         left: 0
         transform: translate(50px, -50%)
+@media (max-width: 992px)
+    .promo
+        &__card
+            width: 100%
+            &:first-child
+                float: none
+        &__cardWrapper
+            width: 100%

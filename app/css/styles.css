@@ -66,9 +66,9 @@
     margin-left: 0; }
   .card:last-child {
     margin-right: 0; }
-  .card div {
-    display: none; }
   .card .card_hover {
+    display: none; }
+  .card:hover .card_hover {
     display: block;
     position: absolute;
     top: 0;
@@ -558,7 +558,17 @@ ul {
 
 .trending__wrapperImg {
   width: 370px;
-  height: 370px; }
+  height: 370px;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .trending__wrapperImg:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05); }
 
 .trending__productTitle {
   padding: 71px 0; }

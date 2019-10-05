@@ -15,9 +15,11 @@
         margin-left: 0
     &:last-child
         margin-right: 0
-    & div
-        display: none
+    // & div
+    //     display: none
     & &_hover
+        display: none
+    &:hover &_hover
         display: block
         position: absolute
         top: 0

@@ -1,0 +1,35 @@
+@import "./base/_vars.sass"
+@import "./base/_mixins.sass"
+.description
+    font-family: "Montserrat", sans-serif
+    max-width: 535px
+    float: right
+    &:not(.description__content)
+        text-align: center
+    &__name
+        font-size: 36px
+        color: $dark
+        font-weight: 700
+        padding-bottom: 20px
+    &__position
+        font-size: 18px
+        color: $hot
+        font-weight: 700
+        text-transform: uppercase
+        padding-bottom: 28px
+    &__price
+        font-size: 28px
+        color: $dark
+        padding-bottom: 28px
+        & span
+            font-weight: 700
+            font-size: 42px
+    &__content
+        font-size: 14px
+        color: $dark
+        line-height: 1.5
+        padding-top: 51px
+        text-align: left
+        & p 
+            padding-bottom: 20px
+

@@ -13,9 +13,12 @@
     <script>
         // этот скрипт делает активными ссылки меню
         $(function () {
-            $('.navigation__link').click(function () {
+            $('.navigation__link').hover(function () {
                 $('.navigation__link').removeClass('navigation__active')
                 $(this).addClass('navigation__active')
+            });
+            $('.navigation__link').mouseleave(function () {
+                $('.navigation__link').removeClass('navigation__active')
             });
         });
         // этот скрипт плавно прокручивает к якорям
@@ -54,8 +57,7 @@
                             <a class="navigation__link" href="#showroom" data-target="anchore">showroom</a>
                         </li>
                         <li class="navigation__item">
-                            <a class="navigation__link menu__active" href="./contacts.html"
-                                data-target="anchore">contact</a>
+                            <a class="navigation__link" href="./contacts.html" data-target="anchore">contact</a>
                         </li>
                         <li class="navigation__item">
                             <a class="navigation__link_search" href="#">
@@ -70,10 +72,10 @@
     </header>
     <section class="trending" id="showroom">
         <div class="container">
-            <div class="title clearfix">
+            <div class="title trending__productTitle clearfix">
                 <ul class="navigation clearfix">
                     <li class="navigation__item">
-                        <a class="navigation__link navigation__active" href="#" data-target="anchore">all</a>
+                        <a class="navigation__link" href="#" data-target="anchore">all</a>
                     </li>
                     <li class="navigation__item">
                         <a class="navigation__link" href="#" data-target="anchore">home</a>
@@ -157,86 +159,90 @@
         </div>
     </section>
     <section class="promo">
-        <div class="promo__card">
-            <img src="./img/promo-img1.jpeg" alt="">
-            <div class="content promo__position">
-                <p class="content__trending content__special">exclusive</p>
-                <h2 class="content__h2">Fishnet Chair</h2>
-                <p class="content__details">Seat and back with upholstery made of cold cure foam. Steel frame,
-                    available in matt powder-coated black</p>
-                <a href="#" class="button">order us
-                    <img src="./img/arrow.png" alt="follow">
-                </a>
+        <div class="promo__cardWrapper">
+            <div class="promo__card">
+                <img src="./img/promo-img1.jpeg" alt="">
+                <div class="content promo__position">
+                    <p class="content__trending content__special">exclusive</p>
+                    <h2 class="content__h2">Fishnet Chair</h2>
+                    <p class="content__details">Seat and back with upholstery made of cold cure foam. Steel frame,
+                        available in matt powder-coated black</p>
+                    <a href="./productDetails.html" class="button">order us
+                        <img src="./img/arrow.png" alt="follow">
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="promo__card">
-            <img src="./img/promo-img_2.jpeg" alt="">
-            <div class="content promo__position">
-                <p class="content__trending content__special">exclusive</p>
-                <h2 class="content__h2">Fishnet Chair</h2>
-                <p class="content__details">Seat and back with upholstery made of cold cure foam. Steel frame,
-                    available in matt powder-coated black</p>
-                <a href="#" class="button">order us
-                    <img src="./img/arrow.png" alt="follow">
-                </a>
+            <div class="promo__card">
+                <img src="./img/promo-img_2.jpeg" alt="">
+                <div class="content promo__position">
+                    <p class="content__trending content__special">exclusive</p>
+                    <h2 class="content__h2">Fishnet Chair</h2>
+                    <p class="content__details">Seat and back with upholstery made of cold cure foam. Steel frame,
+                        available in matt powder-coated black</p>
+                    <a href="./productDetails.html" class="button">order us
+                        <img src="./img/arrow.png" alt="follow">
+                    </a>
+                </div>
             </div>
         </div>
     </section>
     <footer class="footer" id="contacts">
         <div class="container">
-            <div class="footer__contacts">
-                <h4 class="footer__h4">Contact Us</h4>
-                <p>132A Bridge Road Richmond VIC Australia.</p>
-                <p>Talk to us on 1300 132 info@interior.com</p>
-            </div>
-            <div class="footer__information">
-                <h4 class="footer__h4">Useful Information</h4>
-                <ul>
-                    <li><a href="#">Sales terms</a></li>
-                    <li><a href="#">Customer care</a></li>
-                    <li><a href="#">Delivery</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Architect accounts</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Exchanges & returns</a></li>
-                </ul>
-            </div>
-            <div class="footer__form">
-                <h4 class="footer__h4">Let’s Stay in Touch!</h4>
-                <p>Suscribe to know about our latest news, products and special offers just for suscribers.</p>
-                <div class="footer__relative">
-                    <input type="email" placeholder="your email address">
-                    <span class="footer__telegramIcon fab fa-telegram-plane fa-lg"></span>
+            <div class="footer__wrapper">
+                <div class="footer__contacts">
+                    <h4 class="footer__h4">Contact Us</h4>
+                    <p>132A Bridge Road Richmond VIC Australia.</p>
+                    <p>Talk to us on 1300 132 info@interior.com</p>
                 </div>
-            </div>
-            <div class="footer__copyright">
-                <p>&copy; Copyright - INTERIOR 2016. All Rights Reserved.</p>
-                <div class="socialIcons">
-                    <ul class="socialIcons__navigation">
-                        <li class="socialIcons__items">
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <i class="socialIcons__icon fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li class="socialIcons__items">
-                            <a href="https://twitter.com/" target="_blank">
-                                <i class="socialIcons__icon fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="socialIcons__items">
-                            <a href="https://www.google.com/" target="_blank">
-                                <i class="socialIcons__icon fab fa-google-plus-g"></i>
-                            </a>
-                        </li>
-                        <li class="socialIcons__items">
-                            <a href="https://www.pinterest.com/" target="_blank">
-                                <i class="socialIcons__icon fab fa-pinterest-p"></i>
-                            </a>
-                        </li>
+                <div class="footer__information">
+                    <h4 class="footer__h4">Useful Information</h4>
+                    <ul>
+                        <li><a href="#">Sales terms</a></li>
+                        <li><a href="#">Customer care</a></li>
+                        <li><a href="#">Delivery</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Architect accounts</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Exchanges & returns</a></li>
                     </ul>
                 </div>
-                <p>Terms & Conditions / Privacy policy & Cookies</p>
+                <div class="footer__form">
+                    <h4 class="footer__h4">Let’s Stay in Touch!</h4>
+                    <p>Suscribe to know about our latest news, products and special offers just for suscribers.</p>
+                    <div class="footer__relative">
+                        <input type="email" placeholder="your email address">
+                        <span class="footer__telegramIcon fab fa-telegram-plane fa-lg"></span>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <p>&copy; Copyright - INTERIOR 2016. All Rights Reserved.</p>
+                    <div class="socialIcons">
+                        <ul class="socialIcons__navigation">
+                            <li class="socialIcons__items">
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <i class="socialIcons__icon fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="socialIcons__items">
+                                <a href="https://twitter.com/" target="_blank">
+                                    <i class="socialIcons__icon fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="socialIcons__items">
+                                <a href="https://www.google.com/" target="_blank">
+                                    <i class="socialIcons__icon fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                            <li class="socialIcons__items">
+                                <a href="https://www.pinterest.com/" target="_blank">
+                                    <i class="socialIcons__icon fab fa-pinterest-p"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p>Terms & Conditions / Privacy policy & Cookies</p>
+                </div>
             </div>
         </div>
     </footer>

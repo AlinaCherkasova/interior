@@ -2,10 +2,12 @@
 @import "./base/_vars.sass"
 .footer
     background: $footer
-    height: 384px
+    height: 391px//384px 
     padding-top: 120px
     padding-bottom: 19px
     font-family: "Montserrat", sans-serif
+    &__wrapper
+        min-width: 1200px
     &__h4
         font-size: 18px
         color: $colorTextContent
@@ -16,7 +18,7 @@
     &__contacts
         float: left
         width: 227px
-        margin-right: 30px
+        margin-right: 60px //30px
         & > p:nth-child(2)
             padding-bottom: 20px
         & > p
@@ -25,8 +27,8 @@
             color: $dark
     &__information
         float: left
-        width: 430px
-        margin-right: 40px
+        min-width: 430px
+        margin-right: 60px
         & li
             padding-bottom: 6px
         & li > a 
@@ -84,9 +86,3 @@
         right: 0
         transform: translate(-100%, -50%)
         opacity: .15
-
-
-
-
-
-

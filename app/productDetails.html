@@ -12,13 +12,6 @@
     <script src="https://kit.fontawesome.com/1539957057.js" crossorigin="anonymous"></script>
     <script>
         // этот скрипт делает активными ссылки меню
-        // $(function () {
-        //     $('.navigation__link').click(function () {
-        //         $('.navigation__link').removeClass('navigation__active')
-        //         $(this).addClass('navigation__active')
-        //     });
-        // });
-
         $(function () {
             $('.navigation__link').hover(function () {
                 $('.navigation__link').removeClass('navigation__active')
@@ -27,13 +20,34 @@
             $('.navigation__link').mouseleave(function () {
                 $('.navigation__link').removeClass('navigation__active')
             });
+
+        });
+        // этот скрипт делает активными ссылки в блоке ".featuredProduct"
+        $(function () {
+            $('.title__wrapper a').click(function () {
+                $('.title__wrapper a').removeClass('title_active')
+                $(this).addClass('title_active')
+            });
+        });
+        // этот скрипт плавно прокручивает к якорям
+        $(function () {
+            $('a[data-target^="anchore"]').bind('click.smoothscroll', function () {
+                let target = $(this).attr('href');
+                let bl_top = $(target).offset().top;
+                $('body, html').animate({
+                    scrollTop: bl_top
+                }, 700);
+                return false;
+            });
         });
     </script>
 
 
 
+</head>
+
 <body>
-    <header class="contacts">
+    <header class="detailHeader">
         <div class="container">
             <div class="header clearfix">
                 <a href="#">
@@ -63,43 +77,93 @@
                         </li>
                     </ul>
                 </nav>
-                <h1 class="contacts__title">Contact Us</h1>
             </div>
         </div>
     </header>
-    <section class="location">
+    <section class="details">
+        <div class="navigation__wrap">
+            <ul class="navigation navigation__center clearfix">
+                <li class="navigation__item">
+                    <a class="navigation__link navigation__check" href="#" data-target="anchore">all</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#" data-target="anchore">home</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#" data-target="anchore">office</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#" data-target="anchore">furniture</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#" data-target="anchore">modern</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#" data-target="anchore">classic</a>
+                </li>
+            </ul>
+        </div>
         <div class="container">
-            <div class="location__card">
-                <img src="./img/location.png" alt="location">
-                <h6 class="location__place">California</h6>
-                <p class="location__details">Phone:</p>
-                <p class="location__information">1900 - 1234 -5678</p>
-                <p class="location__details">Email:</p>
-                <p class="location__information">info@interior.com</p>
-                <p class="location__details">Address:</p>
-                <p class="location__address">12 W 1st St, 90001 Los Angeles, California</p>
+            <div class="detailsSlider clearfix">
+                <div class="carousel">
+                    <div><img src="./img/slider1.jpeg" alt=""></div>
+                    <div><img src="./img/slider_small_2.jpeg" alt=""></div>
+                    <div><img src="./img/slider_small_3.jpeg" alt=""></div>
+                    <div><img src="./img/slider_small_4.jpeg" alt=""></div>
+                </div>
+                <div class="description">
+                    <h4 class="description__name">Fishnet Chair</h4>
+                    <p class="description__position">Hot Deal</p>
+                    <p class="description__price">$ <span>36.7</span>/sq</p>
+                    <a href="#" class="button button_red button_long">order us
+                        <img src="./img/arrow_white.png" alt="follow">
+                    </a>
+                    <div class="description__content">
+                        <p>The majesty of Mountains - Ugmonk style.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore</p>
+                        <p>et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi
+                            ut
+                            aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                        <p>sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis
+                            iste
+                            natus error sit voluptatem accusantium</p>
+                    </div>
+                </div>
             </div>
-            <div class="location__card">
-                <img src="./img/location.png" alt="location">
-                <h6 class="location__place">California</h6>
-                <p class="location__details">Phone:</p>
-                <p class="location__information">1900 - 1234 -5678</p>
-                <p class="location__details">Email:</p>
-                <p class="location__information">info@interior.com</p>
-                <p class="location__details">Address:</p>
-                <p class="location__address">12 W 1st St, 90001 Los Angeles, California</p>
+        </div>
+    </section>
+    <section class="trending" id="showroom">
+        <div class="container">
+            <div class="title clearfix">
+                <div class="title__wrapper">
+                    <a href="#" class="title__header">Related Products</a>
+                </div>
+                <a href="#" class="title__all">
+                    explore all
+                    <img src="./img/arrow.png" alt="follow">
+                </a>
             </div>
-            <div class="location__card">
-                <img src="./img/location.png" alt="location">
-                <h6 class="location__place">California</h6>
-                <p class="location__details">Phone:</p>
-                <p class="location__information">1900 - 1234 -5678</p>
-                <p class="location__details">Email:</p>
-                <p class="location__information">info@interior.com</p>
-                <p class="location__details">Address:</p>
-                <p class="location__address">12 W 1st St, 90001 Los Angeles, California</p>
+            <div class="trending__contentWrapper">
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-11.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-21.jpeg" alt="product">
+                    </div>
+                </div>
+                <div class="trending__content">
+                    <div class="trending__wrapperImg">
+                        <img src="./img/product-31.jpeg" alt="product">
+                    </div>
+                </div>
             </div>
-            <div class="clf"></div>
         </div>
     </section>
     <footer class="footer" id="contacts">

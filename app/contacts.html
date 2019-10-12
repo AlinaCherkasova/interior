@@ -28,9 +28,12 @@
                 $('.navigation__link').removeClass('navigation__active')
             });
         });
+        $(function () {
+            $('.navigation__toggle').click(function () {
+                $('.navigation__wrapper').toggleClass('active')
+            })
+        })
     </script>
-
-
 
 <body>
     <header class="contacts">
@@ -40,6 +43,9 @@
                     <img src="./img/logo.svg" alt="logo">
                 </a>
                 <nav class="navigation navigation__menu">
+                    <div class="navigation__toggle">
+                        <a href="#">Menu</a>
+                    </div>
                     <ul class="navigation__wrapper clearfix">
                         <li class="navigation__item">
                             <a class="navigation__link" href="./index.html" data-target="anchore">home</a>
